@@ -1,0 +1,134 @@
+\hypertarget{class_sonar}{}\section{Sonar Class Reference}
+\label{class_sonar}\index{Sonar@{Sonar}}
+
+
+\hyperlink{class_sonar}{Sonar} Shoots one broad sonar that covers its field of view and returns maximum distance it reached.  
+
+
+
+
+{\ttfamily \#include $<$sonar.\+h$>$}
+
+
+
+Inheritance diagram for Sonar\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=166pt]{class_sonar__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Sonar\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=166pt]{class_sonar__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_sonar_a71ef009d138f1e372fc35ca0cb6e85e2}{Sonar} ()
+\item 
+bool \hyperlink{class_sonar_a74d551d0ad61861ccf903f2535d799f0}{set\+Field\+Of\+View} (unsigned int fov)
+\item 
+std\+::vector$<$ double $>$ \hyperlink{class_sonar_a33cc5f2df6cc1d96a59067be67eab781}{generate\+Data} ()
+\begin{DoxyCompactList}\small\item\em This function generates random range readings as data using supplied random number generator~\newline
+using normal distribution with mean of 4m and standard deviation of 5m. \end{DoxyCompactList}\item 
+\hyperlink{struct_ranger_1_1data_sequence_num}{data\+Sequence\+Num} \hyperlink{class_sonar_a962c7ba3b9a69e6b3b285764dd4eec3c}{query\+Sample} (unsigned int \&a)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_sonar}{Sonar} Shoots one broad sonar that covers its field of view and returns maximum distance it reached. 
+
+The \hyperlink{class_sonar}{Sonar} works accordingly\+: ~\newline
+It shoots a broad cone shaped sonar wave that covers field of view completely.~\newline
+Then it returns the maximum distance the sonar reaches.~\newline
+ 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Sonar@{Sonar}!Sonar@{Sonar}}
+\index{Sonar@{Sonar}!Sonar@{Sonar}}
+\subsubsection[{\texorpdfstring{Sonar()}{Sonar()}}]{\setlength{\rightskip}{0pt plus 5cm}Sonar\+::\+Sonar (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_sonar_a71ef009d138f1e372fc35ca0cb6e85e2}{}\label{class_sonar_a71ef009d138f1e372fc35ca0cb6e85e2}
+Default constructor -\/ all sensor attributes set to a default values for \hyperlink{class_sonar}{Sonar} 
+
+\subsection{Member Function Documentation}
+\index{Sonar@{Sonar}!generate\+Data@{generate\+Data}}
+\index{generate\+Data@{generate\+Data}!Sonar@{Sonar}}
+\subsubsection[{\texorpdfstring{generate\+Data()}{generateData()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ double $>$ Sonar\+::generate\+Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_sonar_a33cc5f2df6cc1d96a59067be67eab781}{}\label{class_sonar_a33cc5f2df6cc1d96a59067be67eab781}
+
+
+This function generates random range readings as data using supplied random number generator~\newline
+using normal distribution with mean of 4m and standard deviation of 5m. 
+
+Member function to generate range reading for \hyperlink{class_sonar}{Sonar} \begin{DoxyReturn}{Returns}
+dataset of range reading of \hyperlink{class_sonar}{Sonar}\mbox{[}m\mbox{]} 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_ranger_a1ac4a84f251b0793fc262643080f084a}{Ranger}.
+
+\index{Sonar@{Sonar}!query\+Sample@{query\+Sample}}
+\index{query\+Sample@{query\+Sample}!Sonar@{Sonar}}
+\subsubsection[{\texorpdfstring{query\+Sample(unsigned int \&a)}{querySample(unsigned int &a)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Sonar\+::data\+Sequence\+Num} Sonar\+::query\+Sample (
+\begin{DoxyParamCaption}
+\item[{unsigned int \&}]{a}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_sonar_a962c7ba3b9a69e6b3b285764dd4eec3c}{}\label{class_sonar_a962c7ba3b9a69e6b3b285764dd4eec3c}
+Member function that can be used to query stored data of \hyperlink{class_sonar}{Sonar} 
+\begin{DoxyParams}{Parameters}
+{\em Desired} & Sample Number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a struct that consists of\+: ~\newline
+
+\begin{DoxyItemize}
+\item Sample Number~\newline
+
+\item Dataset\mbox{[}m\mbox{]} 
+\end{DoxyItemize}
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_ranger_adbde91455d069a471c890e2aa808c0d3}{Ranger}.
+
+\index{Sonar@{Sonar}!set\+Field\+Of\+View@{set\+Field\+Of\+View}}
+\index{set\+Field\+Of\+View@{set\+Field\+Of\+View}!Sonar@{Sonar}}
+\subsubsection[{\texorpdfstring{set\+Field\+Of\+View(unsigned int fov)}{setFieldOfView(unsigned int fov)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Sonar\+::set\+Field\+Of\+View (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{fov}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_sonar_a74d551d0ad61861ccf903f2535d799f0}{}\label{class_sonar_a74d551d0ad61861ccf903f2535d799f0}
+Member function sets Field of View 
+\begin{DoxyParams}{Parameters}
+{\em Desired} & Field of View \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a boolean indicating if passed value is compatible with \hyperlink{class_sonar}{Sonar}. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_ranger_a9cebe84c1aec338dc0b72baff48ea9d4}{Ranger}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sonar.\+h\item 
+sonar.\+cpp\end{DoxyCompactItemize}

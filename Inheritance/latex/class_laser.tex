@@ -1,0 +1,135 @@
+\hypertarget{class_laser}{}\section{Laser Class Reference}
+\label{class_laser}\index{Laser@{Laser}}
+
+
+\hyperlink{class_laser}{Laser} Shoots multiple Rangefinder rays within its field of view and returns distance readings.  
+
+
+
+
+{\ttfamily \#include $<$laser.\+h$>$}
+
+
+
+Inheritance diagram for Laser\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=166pt]{class_laser__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Laser\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=166pt]{class_laser__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_laser_a68465e89283dffcc29a37e94693c6f87}{Laser} ()
+\item 
+bool \hyperlink{class_laser_a5f140784aae7e82c2aa0f690548d6ebb}{set\+Field\+Of\+View} (unsigned int fov)
+\item 
+std\+::vector$<$ double $>$ \hyperlink{class_laser_af2d93a5e123f3b637be6d3383019562b}{generate\+Data} ()
+\begin{DoxyCompactList}\small\item\em This function generates random range readings as data using supplied random number generator~\newline
+using normal distribution with mean of 4m and standard deviation of 5m. \end{DoxyCompactList}\item 
+\hyperlink{struct_ranger_1_1data_sequence_num}{data\+Sequence\+Num} \hyperlink{class_laser_a35d376014dcf81c217e8bbe1bfd34926}{query\+Sample} (unsigned int \&a)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_laser}{Laser} Shoots multiple Rangefinder rays within its field of view and returns distance readings. 
+
+The \hyperlink{class_laser}{Laser} works accordingly\+: ~\newline
+It shoots multiple number of laser within its field of view.~\newline
+Number of \hyperlink{class_laser}{Laser} rays depends on field of view and Angular Resolution ~\newline
+Then it returns the distances of the nearest obstructions each \hyperlink{class_laser}{Laser} hits.~\newline
+ 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Laser@{Laser}!Laser@{Laser}}
+\index{Laser@{Laser}!Laser@{Laser}}
+\subsubsection[{\texorpdfstring{Laser()}{Laser()}}]{\setlength{\rightskip}{0pt plus 5cm}Laser\+::\+Laser (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_laser_a68465e89283dffcc29a37e94693c6f87}{}\label{class_laser_a68465e89283dffcc29a37e94693c6f87}
+Default constructor -\/ all sensor attributes set to a default values for \hyperlink{class_laser}{Laser} 
+
+\subsection{Member Function Documentation}
+\index{Laser@{Laser}!generate\+Data@{generate\+Data}}
+\index{generate\+Data@{generate\+Data}!Laser@{Laser}}
+\subsubsection[{\texorpdfstring{generate\+Data()}{generateData()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ double $>$ Laser\+::generate\+Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_laser_af2d93a5e123f3b637be6d3383019562b}{}\label{class_laser_af2d93a5e123f3b637be6d3383019562b}
+
+
+This function generates random range readings as data using supplied random number generator~\newline
+using normal distribution with mean of 4m and standard deviation of 5m. 
+
+Member function to genarate \hyperlink{class_laser}{Laser} Readings \begin{DoxyReturn}{Returns}
+dataset of range readings\mbox{[}m\mbox{]} 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_ranger_a1ac4a84f251b0793fc262643080f084a}{Ranger}.
+
+\index{Laser@{Laser}!query\+Sample@{query\+Sample}}
+\index{query\+Sample@{query\+Sample}!Laser@{Laser}}
+\subsubsection[{\texorpdfstring{query\+Sample(unsigned int \&a)}{querySample(unsigned int &a)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Laser\+::data\+Sequence\+Num} Laser\+::query\+Sample (
+\begin{DoxyParamCaption}
+\item[{unsigned int \&}]{a}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_laser_a35d376014dcf81c217e8bbe1bfd34926}{}\label{class_laser_a35d376014dcf81c217e8bbe1bfd34926}
+Member function that can be used to query stored datasets of \hyperlink{class_laser}{Laser} 
+\begin{DoxyParams}{Parameters}
+{\em Desired} & Sample Number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a struct that consists of\+: ~\newline
+
+\begin{DoxyItemize}
+\item Sample Number~\newline
+
+\item Dataset\mbox{[}m\mbox{]} 
+\end{DoxyItemize}
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_ranger_adbde91455d069a471c890e2aa808c0d3}{Ranger}.
+
+\index{Laser@{Laser}!set\+Field\+Of\+View@{set\+Field\+Of\+View}}
+\index{set\+Field\+Of\+View@{set\+Field\+Of\+View}!Laser@{Laser}}
+\subsubsection[{\texorpdfstring{set\+Field\+Of\+View(unsigned int fov)}{setFieldOfView(unsigned int fov)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Laser\+::set\+Field\+Of\+View (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{fov}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_laser_a5f140784aae7e82c2aa0f690548d6ebb}{}\label{class_laser_a5f140784aae7e82c2aa0f690548d6ebb}
+Member function sets Field of View 
+\begin{DoxyParams}{Parameters}
+{\em Desired} & Field of View \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a boolean indicating if passed value is compatible with \hyperlink{class_laser}{Laser}. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_ranger_a9cebe84c1aec338dc0b72baff48ea9d4}{Ranger}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+laser.\+h\item 
+laser.\+cpp\end{DoxyCompactItemize}

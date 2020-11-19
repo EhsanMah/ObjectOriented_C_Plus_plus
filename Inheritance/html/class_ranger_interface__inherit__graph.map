@@ -1,0 +1,5 @@
+<map id="RangerInterface" name="RangerInterface">
+<area shape="rect" id="node2" href="$class_ranger.html" title="Ranger will be used as an abstract class for different type of rangefinder sensor classes ..." alt="" coords="41,80,105,107"/>
+<area shape="rect" id="node3" href="$class_laser.html" title="Laser Shoots multiple Rangefinder rays within its field of view and returns distance readings..." alt="" coords="5,155,60,181"/>
+<area shape="rect" id="node4" href="$class_sonar.html" title="Sonar Shoots one broad sonar that covers its field of view and returns maximum distance it reached..." alt="" coords="85,155,141,181"/>
+</map>
